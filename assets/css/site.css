@@ -28,10 +28,19 @@ p,li { max-width:800px; }
 .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:30px 0; }
 .card { background:#fff; border:1px solid var(--line); padding:20px; }
 .notice { background:var(--soft); border-left:4px solid var(--accent); padding:16px 20px; margin:28px 0; }
+.event-calendar { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin:28px 0 42px; }
+.event-card { display:grid; grid-template-columns:88px 1fr; gap:20px; align-items:start; min-height:190px; padding:24px; background:#fff; border:1px solid var(--line); box-shadow:0 8px 20px rgba(24,50,44,.06); }
+.event-card.featured { grid-column:span 2; background:linear-gradient(135deg,#fff 0%,#f6eee2 100%); border-color:#c58c65; }
+.event-date { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:88px; padding:9px; text-align:center; color:#fff; background:var(--accent); font-family:Georgia,serif; }
+.event-date strong { display:block; font-size:2rem; line-height:1; }
+.event-date span { font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+.event-body h2 { margin:0 0 8px; font-size:1.48rem; }
+.event-body p { margin:0 0 10px; }
+.event-meta { font-size:.9rem; color:#4d5c57; }
 .placeholder { font-weight:700; color:#803f22; background:#fff0df; padding:1px 4px; }
 .lang { display:none; }
 .lang.active { display:block; }
 footer { border-top:1px solid var(--line); background:var(--soft); padding:24px 0 32px; font-size:.9rem; }
 footer p { margin:4px 0; }
 .footer-links { display:flex; gap:14px; flex-wrap:wrap; margin:10px 0; }
-@media (max-width:760px) { .wrap { width:min(100% - 28px,1080px); } .bar { align-items:flex-start; flex-direction:column-reverse; } .grid { grid-template-columns:1fr; } main { padding:35px 0; } }
+@media (max-width:760px) { .wrap { width:min(100% - 28px,1080px); } .bar { align-items:flex-start; flex-direction:column-reverse; } .grid,.event-calendar { grid-template-columns:1fr; } .event-card.featured { grid-column:span 1; } main { padding:35px 0; } }
