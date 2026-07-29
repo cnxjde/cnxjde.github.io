@@ -11,6 +11,8 @@
 - `contact@example.org` 与 `privacy@example.org`
 - 章程中的 `[城市]`
 
+test push
+
 尤其应由协会负责人或德国法律专业人士确认：实际代表权限、最终章程、是否有会费/捐款、税务状态和负责的数据保护监管机构。不要在未替换法律页占位符的情况下公开发布。
 
 ## GitHub Pages 部署
