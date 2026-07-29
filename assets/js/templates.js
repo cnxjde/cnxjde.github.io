@@ -1,6 +1,10 @@
 const FCXD = {
-  nav: { zh:['首页','关于我们','章程','活动与项目','加入我们','联系'], en:['Home','About','Statutes','Activities','Join us','Contact'], de:['Start','Über uns','Satzung','Aktivitäten','Mitmachen','Kontakt'] },
-  paths:['index.html','about.html','statutes.html','activities.html','join.html','contact.html'],
+  nav: { 
+    zh: ['首页', '关于我们', '章程', '理事会与成员', '活动与项目', '加入我们', '联系'], 
+    en: ['Home', 'About', 'Statutes', 'Board & Members', 'Activities', 'Join us', 'Contact'], 
+    de: ['Start', 'Über uns', 'Satzung', 'Vorstand & Mitglieder', 'Aktivitäten', 'Mitmachen', 'Kontakt'] 
+  },
+  paths: ['index.html', 'about.html', 'statutes.html', 'vorstand.html', 'activities.html', 'join.html', 'contact.html'],
   header(current) {
     const links = this.paths.map((p,i) => ['zh','en','de'].map(l => `<a class="lang" data-lang="${l}" ${p===current?'aria-current="page"':''} href="${p}">${this.nav[l][i]}</a>`).join('')).join('');
     return `<header><div class="wrap"><div class="brand"><a href="index.html"><strong>德国中国新疆友协</strong><strong>Freundeskreis China-Xinjiang in Deutschland</strong><span>nichteingetragener Verein · 非注册协会 · unregistered association</span></a></div><div class="bar"><nav aria-label="Main navigation">${links}</nav><div class="language" aria-label="Language selection"><button data-set-lang="zh">中文</button><button data-set-lang="en">EN</button><button data-set-lang="de">DE</button></div></div></div></header>`;
